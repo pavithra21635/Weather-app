@@ -160,8 +160,6 @@ margin-left:14px;
     margin-top: 30px;
     gap: 8px;
 
-  
-   
 }
     
 .box-sun,
@@ -197,6 +195,33 @@ margin-left:14px;
     
 }
 
+.box-highlights{
+    display: flex;
+     margin-left: 40px;
+    margin-top: 30px;
+    gap: 8px;
+
+}
+
+.box-uvindex {
+    height: 135px;
+    width: 325px;
+    background-color: #F4EFEC;
+    border-radius: 10px;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 1px;
+}
+
+.p-uvindex{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    
+}
 
 
 @media (max-width: 600px) {
