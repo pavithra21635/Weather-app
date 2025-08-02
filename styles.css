@@ -145,6 +145,60 @@ margin-left:14px;
 }
 
 
+
+.h2-thisweek {
+    font-size: 17px;
+    margin-left: 40px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-top: 40px;
+}
+
+.box-week{
+    display: flex;
+     margin-left: 40px;
+    margin-top: 30px;
+    gap: 8px;
+
+  
+   
+}
+    
+.box-sun,
+.box-mon,
+.box-tue,
+.box-wed,
+.box-thu,
+.box-fri,
+.box-sat {
+    height: 135px;
+    width: 125px;
+    background-color: #F4EFEC;
+    border-radius: 10px;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 1px;
+}
+
+.p-sun{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    
+}
+
+.p-temp{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    
+}
+
+
+
 @media (max-width: 600px) {
    .container {
        width: 100%;
