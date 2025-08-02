@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Weather App</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
 
     <body>
@@ -14,8 +15,11 @@
             <div class="sidebar">
 
                 <div class="searchbox">
-                    <input type="text" placeholder="Search for places..." />
-                    <button type="submit" class="search-button">
+                    <input type="text" id="city-input" placeholder="Search for places..." />
+                    <!-- <button type="button" id="city-input-btn" class="search-button" onclick="searchCity($('#city-input').val())">
+                        <img src="Icon/Search.png" alt="Search" style="width:20px; height:20px;">
+                    </button> -->
+                   <button type="button" id="city-input-btn" class="search-button" onclick="searchCity(document.getElementById('city-input').value)">
                         <img src="Icon/Search.png" alt="Search" style="width:20px; height:20px;">
                     </button>
                 </div>
@@ -24,23 +28,23 @@
 
                 <Img src="Images/Sun.png" alt="Weather Image" class="image-weather" >
 
-                <h2 class="h1-weather-temp">22 C</h2>
+                <h2 class="h1-weather-temp" id="temperature"></h2>
 
-                <h3 class="h3-datetime">Monday, 12:00 PM</h3>
-
+                <h3 class="h3-datetime" id="date"></h3>
+                <!-- city name -->
                 <div class="box-location">
-                    <img src="Icon/Location.png" alt="location" class="icon-location" style="width:22px; height:22px;">
-                    <p class="p-location">Moratuwa, Sri Lanka</p>
+                    <img src="Icon/Location.png" alt="location"  class="icon-location" style="width:22px; height:22px;">
+                    <p class="p-location" id="city-name"></p>
                 </div>
 
                 <div class="box-description">
-                    <img src="Icon/Partly Cloudy Day.png" alt="description" class="icon-description" style="width:20px; height:20px;">
-                    <p class="p-decription">Partly Cloudy</p>
+                    <img src="Icon/Partly Cloudy Day.png" alt="description"  class="icon-description" style="width:20px; height:20px;">
+                    <p class="p-decription" id="description"></p>
                 </div>
 
                 <div class="box-rain">
                     <img src="Icon/Rain.png" alt="rain" class="icon-rain" style="width:20px; height:20px;">
-                    <p class="p-rain">Rain 30%</p>
+                    <p class="p-rain"></p>
                 </div>
             </div>
 
@@ -63,9 +67,21 @@
                     <div class="box-sat"></div>
                 </div>
 
+                <h2 class="h2-thisweek">Today's Highlights</h2>
+
+                <div class="box-highlights">
+                    <div class="box-uvindex">
+                        <p class="p-uvindex">UV index</p>
+
+                </div>
+
             </div>
             
         </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+        <script src="script.js"></script>
 
     </body>
 </html>
