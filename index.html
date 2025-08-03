@@ -14,6 +14,8 @@
         <div class="container">
             <div class="sidebar">
 
+                <h2 class="h1-weather">Weather Forecast</h2>
+
                 <div class="searchbox">
                     <input type="text" id="city-input" placeholder="Search for places..." />
                     <!-- <button type="button" id="city-input-btn" class="search-button" onclick="searchCity($('#city-input').val())">
@@ -24,9 +26,9 @@
                     </button>
                 </div>
 
-                <h2 class="h1-weather">Weather</h2>
+                
 
-                <Img src="Images/Sun.png" alt="Weather Image" class="image-weather" >
+                <Img  alt="Weather Image" class="image-weather" >
 
                 <h2 class="h1-weather-temp" id="temperature"></h2>
 
@@ -48,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="main area">
+            <div class="main-area">
 
                 <h2 class="h2-thisweek">This week</h2>
 
@@ -69,16 +71,26 @@
 
                 <h2 class="h2-thisweek">Today's Highlights</h2>
 
-                <div class="box-highlights">
-                    <div class="box-uvindex">
-                        <p class="p-uvindex">UV index</p>
-
+                <div class="box-highlights-1">
+                    <div class="box-feelslike">
+                        <p class="p-feelslike">Feels Like</p>
+                        <p class="p-feelsliketemp" id="feelliketemp">5 C</p>
+                        <p class="p-feelslikedesc" id="feelslikedesc">warmer than ususal</p>
                      </div>
 
-                     <div class="box-wind status">
-                        <p class="p-uvindex">UV index</p>
-
+                     <div class="box-windstatus">
+                        <p class="p-windstatusp">Wind Status</p>
+                        <p class="p-windstatus" id="windspeed">40 ph</p>
+                        <p class="p-winddesc" id="windspeeddesc">Mild breeze</p>
                      </div>
+
+                     <div class="box-sunriseset">
+                        <p class="p-sunriseset" >Sunrise & Sunset</p>
+                        <p class="p-sunrisetime" id="sunrise">6.00am</p>
+                        <p class="p-sunsettime" id="sunset">8.00pm</p>
+                     </div>
+
+
 
             </div>
             

@@ -4,14 +4,16 @@
    box-sizing: border-box;
    width: 90%;
 }
-
+/* *******************************  side bar  ***************************************************************** */
 .sidebar {
+    flex-shrink: 0;
     background-color: #F4EFEC;
     width: 350px;
     Height:100vh; /* Full viewport height */
     padding: 20px 10px;
     box-sizing: border-box;
 }
+
 
 .searchbox{
     position: relative;
@@ -165,8 +167,15 @@ margin-left:14px;
      font-size: 14px;
 }
 
+/* ********************************************   main area  ****************************************************** */
 
+.main-area {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
+/* *****  this week  *** */
 .h2-thisweek {
     font-size: 17px;
     margin-left: 40px;
@@ -216,36 +225,147 @@ margin-left:14px;
     
 }
 
-.box-highlights{
+/* ******** highlights 1 ********** */
+
+.box-highlights-1{
     display: flex;
      margin-left: 40px;
     margin-top: 30px;
-    gap: 8px;
+    gap: 20px;
 
 }
 
-.box-uvindex {
+.box-feelslike{
     height: 135px;
-    width: 325px;
+    width: 295px;
     background-color: #F4EFEC;
     border-radius: 10px;
     display: flex;
    flex-direction: column;
-   align-items: center;
-    justify-content: center;
+   /* align-items: center;
+    justify-content: center; */
     box-sizing: border-box;
-    gap: 1px;
-}
-
-.p-uvindex{
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 14px;
     
 }
 
+.p-feelslike{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-left: 17px;
+    color: #5B5656;
+    margin-bottom: 1px;
+    margin-top: 16px;
+  
+}
 
-@media (max-width: 600px) {
+.p-feelsliketemp{
+
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 17px;
+    margin-bottom: 1px;
+    margin-top: 22px;
+    
+
+}
+
+.p-feelslikedesc{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-left: 17px;
+    margin-top:20px;
+    
+}
+
+.box-windstatus {
+   height: 135px;
+    width: 295px;
+    background-color: #F4EFEC;
+    border-radius: 10px;
+    display: flex;
+   flex-direction: column;
+   /* align-items: center;
+    justify-content: center; */
+    box-sizing: border-box;
+}
+
+.p-windstatusp{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-left: 17px;
+    color: #5B5656;
+    margin-bottom: 1px;
+    margin-top: 16px;
+  
+}
+
+.p-windstatus{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 17px;
+    margin-bottom: 1px;
+    margin-top: 22px;
+    
+}
+
+.p-winddesc{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-left: 17px;
+    margin-top:20px;
+}
+
+.box-sunriseset {
+    height: 135px;
+    width: 295px;
+    background-color: #F4EFEC;
+    border-radius: 10px;
+    display: flex;
+   flex-direction: column;
+   /* align-items: center;
+    justify-content: center; */
+    box-sizing: border-box;
+}
+
+.p-sunriseset{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-left: 17px;
+    color: #5B5656;
+    margin-bottom: 1px;
+    margin-top: 16px;
+    
+}
+
+.p-sunrisetime{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 17px;
+    margin-bottom: 1px;
+    margin-top: 22px;
+    
+}
+
+.p-sunsettime{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 17px;
+    margin-top:20px;
+}
+
+
+/* ****************highlights 2  ***** */
+
+/* @media (max-width: 600px) {
    .container {
        width: 100%;
        padding: 10px;
@@ -255,5 +375,34 @@ margin-left:14px;
         padding: 10px 0;
         margin-bottom: 10px;
     }
-}
+} */
    
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+
+  .main-area {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    padding: 8px 0; /* tighter for smaller screens */
+  }
+
+  .main-area {
+    padding: 8px; /* optional tighter spacing for phones */
+  }
+}
