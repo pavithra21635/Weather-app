@@ -32,19 +32,40 @@
 }
 
 .search-button{
-    border: none;
+    border: #F5802A;
     position: absolute;
     right: 14px;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
+    background: none;
     padding: 0;
     height: 24px;
     width: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
+
+.search-button img {
+    cursor: pointer;
+}
+
+.search-button:hover {
+    /* background-color: #ccc; */
+    border:#F5802A;
+}
+
+.search-button:hover img {
+    filter: brightness(1.2); /* slight highlight */
+    transform: scale(1.5); /* gentle zoom */
+    transition: all 0.2s ease;
+}
+
+/* .search-button:focus {
+    outline: 2px solid #007BFF;
+    border-radius: 5px;
+} */
 
 .h1-weather {
     font-size: 24px;
