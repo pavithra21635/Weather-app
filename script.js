@@ -69,6 +69,7 @@ function weatherShowFn(data) {
     $('.p-rain').text(`Rain (last hour): ${data.rain['1h']} mm`);
      } else {
     $('.p-rain').text(`No rain`);
+	 }
 
 	//Determine day or night
 	const currentTime = data.dt;
@@ -85,10 +86,50 @@ function weatherShowFn(data) {
 
     $('.image-weather').attr('src', customImage);
 
-   
-}
+	//feelslike
+	
+	const feelsLike = data.main.feels_like;
+	$('#feelliketemp').
+		html(`${Math.round(feelsLike)}°C`); 
+
+	const temp = data.main.temp;
+	$('#feelslikedesc').
+		text(getFeelsLikeStatus(temp, feelsLike));
+
+	//wind status
+		const windSpeed = data.wind.speed;
+		$('#windspeed').text(`${Math.round(windSpeed)} m/s`);
+
+		$('#windspeeddesc').
+		text(getWindStatus(windSpeed));
+
+		//sunrise & suset
+
+		$('#sunrise').
+		text(formatTime(sunrise));
+		$('#sunrise').
+		text(formatTime(sunset));
 
 	
+	
+
 }
 
+function getFeelsLikeStatus(temp, feelsLike) {
+    const diff = feelsLike - temp;
+    if (diff > 2) return "🌞 Feels warmer than actual";
+    if (diff < -2) return "❄️ Feels cooler than actual";
+    return "🌡️ Feels like actual temperature";
+}
+
+function getWindStatus(speed) {
+    if (speed < 3) return "Light breeze";
+    if (speed < 8) return "Moderate breeze";
+    if (speed < 13) return "Strong breeze";
+    return "Windy";
+}
+
+function formatTime(timestamp) {
+    return moment.unix(timestamp).format("h:mm A");
+}
 
