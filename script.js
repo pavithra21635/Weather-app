@@ -105,10 +105,30 @@ function weatherShowFn(data) {
 
 		//sunrise & suset
 
-		$('#sunrise').
-		text(formatTime(sunrise));
-		$('#sunrise').
-		text(formatTime(sunset));
+		// Format and display sunrise and sunset with emojis
+        $('#sunrise').text(`⬆️ ${formatTime(sunrise)}`);
+        $('#sunset').text(`⬇️ ${formatTime(sunset)}`);
+        //humidity
+
+        const humidity = data.main.humidity;
+        $('#humidity').text(`${humidity}%`);
+        $('#humiditydesc').text(getHumidityStatus(humidity));
+
+        //visibility
+
+        const visibility = data.visibility;
+         $('#visibility').text(`${visibility}m`);
+        $('#visibilitydesc').text(getVisibilityStatus(visibility));
+
+        //pressure
+
+        const pressure = data.main.pressure;
+        $('#pressure').text( `${pressure} hPa`);
+        $('#pressuredesc').text(getPressureStatus(pressure));
+
+
+
+
 
 	
 	
@@ -123,13 +143,36 @@ function getFeelsLikeStatus(temp, feelsLike) {
 }
 
 function getWindStatus(speed) {
-    if (speed < 3) return "Light breeze";
-    if (speed < 8) return "Moderate breeze";
-    if (speed < 13) return "Strong breeze";
-    return "Windy";
+    if (speed < 3) return "🍃 Light breeze";         // gentle leaves fluttering
+    if (speed < 8) return "🌬️ Moderate breeze";     // air blowing face
+    if (speed < 13) return "💨 Strong breeze";       // motion air dash
+    return "🌪️ Windy";                              // tornado for strong winds
 }
 
 function formatTime(timestamp) {
     return moment.unix(timestamp).format("h:mm A");
 }
+
+function getHumidityStatus(humidity) {
+    if (humidity < 30) return "💨 Low (dry)";
+    if (humidity < 60) return "😊 Normal";
+    if (humidity < 80) return "😓 High";
+    return "🥵 Very high (muggy)";
+}
+
+
+function getVisibilityStatus(visibility) {
+    if (visibility > 10000) return "🔭 Excellent";
+    if (visibility > 6000) return "👀 Good";
+    if (visibility > 3000) return "🌁 Moderate";
+    return "🚫 Poor";
+}
+
+
+function getPressureStatus(pressure) {
+    if (pressure < 1000) return "🌧️ Low (chance of rain)";
+    if (pressure <= 1015) return "🌤️ Normal";
+    return "☀️ High (clear weather likely)";
+}
+
 
