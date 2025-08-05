@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
     <head>
@@ -12,41 +13,39 @@
     <body>
 
         <div class="container">
+
             <div class="sidebar">
 
                 <h2 class="h1-weather">Weather Forecast</h2>
 
                 <div class="searchbox">
                     <input type="text" id="city-input" placeholder="Search for places..." />
-                    <!-- <button type="button" id="city-input-btn" class="search-button" onclick="searchCity($('#city-input').val())">
-                        <img src="Icon/Search.png" alt="Search" style="width:20px; height:20px;">
-                    </button> -->
-                   <button type="button" id="city-input-btn" class="search-button" title="Search" onclick="searchCity(document.getElementById('city-input').value)">
+                   
+                    <button type="button" id="city-input-btn" class="search-button" title="Search" onclick="searchCity(document.getElementById('city-input').value)">
                         <img src="Icon/Search.png" alt="Search" style="width:20px; height:20px;">
                     </button>
                 </div>
 
-                
-
-                <Img  alt="Weather Image" class="image-weather" >
+                <Img  alt="Weather Image"  src="Images/loading-2.gif"  class="image-weather" >
 
                 <h2 class="h1-weather-temp" id="temperature"></h2>
 
                 <h3 class="h3-datetime" id="date"></h3>
+
                 <!-- city name -->
                 <div class="box-location">
                     <img src="Icon/Location.png" alt="location"  class="icon-location" style="width:22px; height:22px;">
-                    <p class="p-location" id="city-name"></p>
+                    <p class="p-location" id="city-name">loading..</p>
                 </div>
 
                 <div class="box-description">
                     <img src="Icon/Partly Cloudy Day.png" alt="description"  class="icon-description" style="width:20px; height:20px;">
-                    <p class="p-decription" id="description"></p>
+                    <p class="p-decription" id="description">loading..</p>
                 </div>
 
                 <div class="box-rain">
                     <img src="Icon/Rain.png" alt="rain" class="icon-rain" style="width:20px; height:20px;">
-                    <p class="p-rain"></p>
+                    <p class="p-rain">loading..</p>
                 </div>
             </div>
 
@@ -57,40 +56,40 @@
                 <div class="box-week">
                     <div class="box-sun">
                         <p class="p-sun">Sun</p>
-                       <img src="Images/7-1.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
 
                     </div>
                     <div class="box-mon">
                         <p class="p-sun">Mon</p>
-                       <img src="Images/7-4.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
                     </div>
 
                     <div class="box-tue">
                         <p class="p-sun">Tue</p>
-                       <img src="Images/7-2.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
                     </div>
                     <div class="box-wed">
                         <p class="p-sun">Wed</p>
-                       <img src="Images/7-4.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
                     </div>
                     <div class="box-thu">
                         <p class="p-sun">Thu</p>
-                       <img src="Images/7-3.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
                     </div>
                     <div class="box-fri">
                         <p class="p-sun">Fri</p>
-                       <img src="Images/7-4.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
                     </div>
                     <div class="box-sat">
                         <p class="p-sun">Sat</p>
-                       <img src="Images/7-4.png" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
-                       <p class="p-temp"> 22 C</p>
+                       <img src="Images/loading-3.gif" alt="wsun" class="image-lightening" style="width:42px; height:42px;">
+                       <p class="p-temp"> loading..</p>
                     </div>
                 </div>
 
@@ -99,20 +98,20 @@
                 <div class="box-highlights-1">
                     <div class="box-feelslike">
                         <p class="p-feelslike">Feels Like</p>
-                        <p class="p-feelsliketemp" id="feelliketemp">5 C</p>
-                        <p class="p-feelslikedesc" id="feelslikedesc">warmer than ususal</p>
+                        <p class="p-feelsliketemp" id="feelliketemp">loading..</p>
+                        <p class="p-feelslikedesc" id="feelslikedesc">loading..</p>
                      </div>
 
                      <div class="box-windstatus">
                         <p class="p-windstatusp">Wind Status</p>
-                        <p class="p-windstatus" id="windspeed">40 ph</p>
-                        <p class="p-winddesc" id="windspeeddesc">Mild breeze</p>
+                        <p class="p-windstatus" id="windspeed">loading..</p>
+                        <p class="p-winddesc" id="windspeeddesc">loading..</p>
                      </div>
 
                      <div class="box-sunriseset">
                         <p class="p-sunriseset" >Sunrise & Sunset</p>
-                        <p class="p-sunrisetime" id="sunrise">6.00am</p>
-                        <p class="p-sunsettime" id="sunset">8.00pm</p>
+                        <p class="p-sunrisetime" id="sunrise">loading..</p>
+                        <p class="p-sunsettime" id="sunset">loading..</p>
                      </div>
 
                      <!-- <img src="Icons/arrow-up-orange.svg" class="icon" />
@@ -123,20 +122,20 @@
                  <div class="box-highlights-2">
                     <div class="box-Humidity">
                         <p class="p-humidity">Humidity</p>
-                        <p class="p-humidityval" id="humidity">5 C</p>
-                        <p class="p-humiditydesc" id="humiditydesc">warmer than ususal</p>
+                        <p class="p-humidityval" id="humidity">loading..</p>
+                        <p class="p-humiditydesc" id="humiditydesc">loading..</p>
                      </div>
 
                      <div class="box-visibility">
                         <p class="p-visibility">Visibility</p>
-                        <p class="p-visibilityval" id="visibility">40 ph</p>
-                        <p class="p-visibilitydesc" id="visibilitydesc">Mild breeze</p>
+                        <p class="p-visibilityval" id="visibility">loading..</p>
+                        <p class="p-visibilitydesc" id="visibilitydesc">loading..</p>
                      </div>
 
                      <div class="box-pressure">
                         <p class="p-pressure" >Pressure</p>
-                        <p class="p-pressureval" id="pressure">6.00am</p>
-                        <p class="p-pressuredesc" id="pressuredesc">8.00pm</p>
+                        <p class="p-pressureval" id="pressure">loading..</p>
+                        <p class="p-pressuredesc" id="pressuredesc">loading..</p>
                      </div>
 
                  </div>
